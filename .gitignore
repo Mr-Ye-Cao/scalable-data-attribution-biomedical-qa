@@ -1,0 +1,7 @@
+# LaTeX compilation artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+main.fdb_latexmk
+main.fls

@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "noformat": {
+      "ft_wins": 500,
+      "pt_wins": 0,
+      "total": 500
+    },
+    "iter1": {
+      "ft_wins": 500,
+      "pt_wins": 0,
+      "total": 500
+    }
+  },
+  "ckpt32": {
+    "noformat": {
+      "ft_wins": 500,
+      "pt_wins": 0,
+      "total": 500
+    },
+    "iter1": {
+      "ft_wins": 494,
+      "pt_wins": 6,
+      "total": 500
+    }
+  },
+  "ckpt64": {
+    "noformat": {
+      "ft_wins": 500,
+      "pt_wins": 0,
+      "total": 500
+    },
+    "iter1": {
+      "ft_wins": 494,
+      "pt_wins": 6,
+      "total": 500
+    }
+  }
+}

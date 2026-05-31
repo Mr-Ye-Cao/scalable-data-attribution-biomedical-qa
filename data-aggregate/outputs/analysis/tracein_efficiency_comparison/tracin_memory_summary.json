@@ -1,0 +1,43 @@
+{
+  "model": "OLMo-3-7B-Instruct",
+  "n_params": 7298011136,
+  "dtype": "fp16",
+  "n_samples_measured": 3,
+  "theoretical_size_bytes": 14596022272,
+  "actual_avg_size_bytes": 14596022272.0,
+  "per_sample_results": [
+    {
+      "sample_idx": 0,
+      "loss": 2.940885066986084,
+      "memory_size_bytes": 14596022272,
+      "compute_time_sec": 2.0664522647857666,
+      "total_elements": 7298011136
+    },
+    {
+      "sample_idx": 1,
+      "loss": 2.959263801574707,
+      "memory_size_bytes": 14596022272,
+      "compute_time_sec": 1.3080120086669922,
+      "total_elements": 7298011136
+    },
+    {
+      "sample_idx": 2,
+      "loss": 3.0882842540740967,
+      "memory_size_bytes": 14596022272,
+      "compute_time_sec": 1.3146932125091553,
+      "total_elements": 7298011136
+    }
+  ],
+  "storage_estimates": {
+    "finetune_500": 7298011136000.0,
+    "pretrain_500": 7298011136000.0,
+    "total_1000": 14596022272000.0,
+    "total_10000": 145960222720000.0
+  },
+  "rapidin_comparison": {
+    "rapidin_k": 65536,
+    "rapidin_size_500_samples": 222717625.0,
+    "tracin_size_500_samples": 7298011136000.0,
+    "compression_ratio": 32768.0
+  }
+}

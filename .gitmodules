@@ -1,0 +1,18 @@
+[submodule "RapidIn"]
+	path = RapidIn
+	url = https://github.com/Mr-Ye-Cao/RapidIn.git
+[submodule "Medical-LLM-Fine-tuning"]
+	path = Medical-LLM-Fine-tuning
+	url = https://github.com/Mr-Ye-Cao/Medical-LLM-Fine-tuning.git
+[submodule "OLMo-2-0425-1B"]
+	path = OLMo-2-0425-1B
+	url = https://huggingface.co/allenai/OLMo-2-0425-1B
+[submodule "pubmedqa"]
+	path = pubmedqa
+	url = https://github.com/pubmedqa/pubmedqa
+[submodule "OLMo-3-7B-Instruct"]
+	path = OLMo-3-7B-Instruct
+	url = https://huggingface.co/allenai/OLMo-3-7B-Instruct
+[submodule "OLMo-3-1025-7B"]
+	path = OLMo-3-1025-7B
+	url = https://huggingface.co/allenai/OLMo-3-1025-7B

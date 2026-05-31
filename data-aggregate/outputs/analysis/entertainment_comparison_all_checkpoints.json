@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-01-20T07:51:04.662020",
+  "checkpoints": {
+    "baseline": {
+      "entertainment_formatted": 0.3838786780834198,
+      "entertainment_noformat": 0.10349827259778976,
+      "medical_formatted": 0.4019234776496887,
+      "medical_noformat": 0.10862886905670166,
+      "format_effect": 3.709034638435286
+    },
+    "ckpt32": {
+      "entertainment_formatted": 0.31996119022369385,
+      "entertainment_noformat": 0.09692896157503128,
+      "medical_formatted": 0.39679256081581116,
+      "medical_noformat": 0.13397076725959778,
+      "format_effect": 3.300986464979475
+    },
+    "ckpt64": {
+      "entertainment_formatted": 0.2837875485420227,
+      "entertainment_noformat": 0.09506017714738846,
+      "medical_formatted": 0.32669520378112793,
+      "medical_noformat": 0.11733049154281616,
+      "format_effect": 2.9853463043942905
+    },
+    "ckpt96": {
+      "entertainment_formatted": 0.27337464690208435,
+      "entertainment_noformat": 0.09109865128993988,
+      "medical_formatted": 0.2988825738430023,
+      "medical_noformat": 0.11032036691904068,
+      "format_effect": 3.0008638221439115
+    },
+    "ckpt128": {
+      "entertainment_formatted": 0.23447708785533905,
+      "entertainment_noformat": 0.0819021612405777,
+      "medical_formatted": 0.26941338181495667,
+      "medical_noformat": 0.09615344554185867,
+      "format_effect": 2.8628925574575614
+    },
+    "ckpt160": {
+      "entertainment_formatted": 0.271671861410141,
+      "entertainment_noformat": 0.09363016486167908,
+      "medical_formatted": 0.3180261254310608,
+      "medical_noformat": 0.10925083607435226,
+      "format_effect": 2.901542059778331
+    }
+  }
+}

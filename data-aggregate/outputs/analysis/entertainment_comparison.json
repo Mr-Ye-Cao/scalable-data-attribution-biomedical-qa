@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-16T07:06:16.856641",
+  "purpose": "2x2 comparison: Entertainment vs Medical \u00d7 Formatted vs Raw",
+  "influence_matrix": {
+    "entertainment_formatted": 0.3838786780834198,
+    "entertainment_noformat": 0.10349827259778976,
+    "medical_formatted": 0.4019234776496887,
+    "medical_noformat": 0.10862886905670166
+  },
+  "format_effect": {
+    "entertainment_boost": 3.709034638435286,
+    "medical_boost": 3.6999692728080813
+  },
+  "content_effect": {
+    "with_format": 1.0470065168932035,
+    "without_format": 1.0495718076266856
+  },
+  "decomposition": {
+    "baseline_raw": 0.10349827259778976,
+    "format_contribution": 0.28038040548563004,
+    "medical_content_contribution": 0.01804479956626892,
+    "format_pct": 69.75964855927276,
+    "content_pct": 4.489610726845007
+  }
+}

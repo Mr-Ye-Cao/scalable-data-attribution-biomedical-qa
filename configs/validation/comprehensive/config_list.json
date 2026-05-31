@@ -1,0 +1,58 @@
+[
+  {
+    "name": "baseline_noformat",
+    "config_path": "configs/validation/comprehensive/baseline_noformat.json"
+  },
+  {
+    "name": "baseline_iter2",
+    "config_path": "configs/validation/comprehensive/baseline_iter2.json"
+  },
+  {
+    "name": "baseline_iter3",
+    "config_path": "configs/validation/comprehensive/baseline_iter3.json"
+  },
+  {
+    "name": "baseline_iter4",
+    "config_path": "configs/validation/comprehensive/baseline_iter4.json"
+  },
+  {
+    "name": "ckpt32_noformat",
+    "config_path": "configs/validation/comprehensive/ckpt32_noformat.json"
+  },
+  {
+    "name": "ckpt32_iter1",
+    "config_path": "configs/validation/comprehensive/ckpt32_iter1.json"
+  },
+  {
+    "name": "ckpt32_iter2",
+    "config_path": "configs/validation/comprehensive/ckpt32_iter2.json"
+  },
+  {
+    "name": "ckpt32_iter3",
+    "config_path": "configs/validation/comprehensive/ckpt32_iter3.json"
+  },
+  {
+    "name": "ckpt32_iter4",
+    "config_path": "configs/validation/comprehensive/ckpt32_iter4.json"
+  },
+  {
+    "name": "ckpt64_noformat",
+    "config_path": "configs/validation/comprehensive/ckpt64_noformat.json"
+  },
+  {
+    "name": "ckpt64_iter1",
+    "config_path": "configs/validation/comprehensive/ckpt64_iter1.json"
+  },
+  {
+    "name": "ckpt64_iter2",
+    "config_path": "configs/validation/comprehensive/ckpt64_iter2.json"
+  },
+  {
+    "name": "ckpt64_iter3",
+    "config_path": "configs/validation/comprehensive/ckpt64_iter3.json"
+  },
+  {
+    "name": "ckpt64_iter4",
+    "config_path": "configs/validation/comprehensive/ckpt64_iter4.json"
+  }
+]

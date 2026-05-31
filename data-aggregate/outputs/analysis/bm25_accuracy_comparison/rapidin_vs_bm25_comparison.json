@@ -1,0 +1,25 @@
+{
+  "data_sources": {
+    "finetune": "data-aggregate/input/finetune/finetune_500.jsonl",
+    "pretrain": "data-aggregate/input/pretrain/pretrain_500_iter4.jsonl",
+    "test": "data-aggregate/input/test/test_500.jsonl"
+  },
+  "bm25": {
+    "total_queries": 500,
+    "ft_wins": 202,
+    "ft_wins_pct": 40.4,
+    "avg_finetune_ratio": 0.4958
+  },
+  "rapidin_ckpt64": {
+    "total_queries": 500,
+    "ft_wins": 433,
+    "ft_wins_pct": 86.6,
+    "ft_mean": 0.38616254925727844,
+    "pt_mean": 0.3651354908943176,
+    "ft_pt_ratio": 1.057587002324698
+  },
+  "interpretation": {
+    "rapidin_ft_advantage": 46.199999999999996,
+    "conclusion": "RapidIn captures gradient-based influence showing FT dominance (86.6%); BM25 only captures lexical similarity (40.4% FT wins)"
+  }
+}
