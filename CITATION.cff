@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this research code or results, please cite the accompanying IEEE ICHI paper."
+title: "Scalable Data Attribution for Biomedical Question Answering"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Cao
+    given-names: Ye
+    orcid: "https://orcid.org/0009-0002-2496-9353"
+  - family-names: Xu
+    given-names: Zhaozhuo
+repository-code: "https://github.com/Mr-Ye-Cao/scalable-data-attribution-biomedical-qa"
+preferred-citation:
+  type: conference-paper
+  title: "Scalable Data Attribution Reveals Fine-Tuning Unlocks LLM Pretrained Knowledge in Biomedical Question Answering"
+  authors:
+    - family-names: Cao
+      given-names: Ye
+      orcid: "https://orcid.org/0009-0002-2496-9353"
+    - family-names: Xu
+      given-names: Zhaozhuo
+  year: 2026
+  doi: "10.1109/ICHI69079.2026.00228"
+  collection-title: "2026 IEEE 14th International Conference on Healthcare Informatics (ICHI)"

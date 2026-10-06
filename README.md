@@ -1,18 +1,36 @@
 # Scalable Data Attribution for Biomedical QA
 
-This branch is an organized results view for the IEEE ICHI 2026 submission:
+Research code and saved experiment results accompanying the IEEE ICHI 2026 paper:
 
 **Scalable Data Attribution Reveals Fine-Tuning Unlocks LLM Pretrained Knowledge in Biomedical Question Answering**
 
 The project studies whether a biomedical QA model's predictions are driven more by fine-tuning examples or by pretrained medical knowledge. The experiments use OLMo-3-7B-Instruct fine-tuned on PubMedQA and compare gradient-based attribution against lexical retrieval baselines.
 
+**Authors:** Ye Cao and Zhaozhuo Xu
+
+**Paper:** [IEEE Xplore](https://ieeexplore.ieee.org/document/11634855/) · [DOI](https://doi.org/10.1109/ICHI69079.2026.00228) · [BibTeX](paper.bib)
+
+## Start here: reproduce the saved results on your laptop
+
+Python 3.9+; no GPU, model download, or third-party package is needed:
+
+```bash
+git clone https://github.com/Mr-Ye-Cao/scalable-data-attribution-biomedical-qa.git
+cd scalable-data-attribution-biomedical-qa
+python3 scripts/demo_results.py --output results/demo-summary.json
+```
+
+This recomputes per-query comparisons from the archived scores. It does **not** retrain the model or recompute gradients. Expected PT-win percentages are `0.0, 1.8, 13.4, 16.6, 24.8, 28.4` across epochs 0–5. See [reproduction details and limitations](docs/REPRODUCING_RESULTS.md).
+
+![Pretraining attribution across fine-tuning checkpoints](assets/attribution-summary.png)
+
 ## Key Takeaways
 
 | Question | Current Evidence |
 | --- | --- |
-| Can attribution separate medical from non-medical data? | Medical pretraining text has higher influence than entertainment controls under the same formatting. At epoch 2, medical formatted PT mean max influence is `0.365` vs entertainment formatted PT `0.284`, a `28.5%` lift. |
+| Can attribution separate medical from non-medical data? | Medical pretraining text has higher measured attribution scores than entertainment controls under matched formatting. At epoch 2, rounded mean maxima are `0.365` vs `0.284` (about `28.5%`; unrounded saved scores give `28.7%`). |
 | Does pretraining influence change during fine-tuning? | PT wins rise from `0.0%` at baseline to `28.4%` by epoch 5, suggesting increasing use of pretrained medical knowledge as training progresses. |
-| Does gradient attribution beat lexical matching? | LARK/RapidIn FT wins are `86.6%` at epoch 2, while BM25 FT wins are `40.4%`, a `46.2` point gap. |
+| How do gradient and lexical source rankings differ? | LARK/RapidIn FT wins are `86.6%` at epoch 2, while BM25 FT wins are `40.4%`, a `46.2` percentage-point gap. This is a source-selection comparison, not measured accuracy against causal ground truth. |
 | Is full-gradient attribution feasible? | Full-gradient TracIn for 500 samples is estimated at about `7.3 TB`; LARK/RapidIn projected storage is about `223 MB` for the same sample count. |
 
 ## Result Figures
@@ -46,7 +64,7 @@ The project studies whether a biomedical QA model's predictions are driven more 
 Initialize external code/model/data references:
 
 ```bash
-git submodule update --init --recursive
+git submodule update --init RapidIn Medical-LLM-Fine-tuning pubmedqa
 ```
 
 Common entry points:
@@ -59,8 +77,7 @@ python scripts/data_prep/download_pubmedqa.py
 python scripts/eval/eval_base_model.py
 
 # Fine-tune via the Medical-LLM-Fine-tuning submodule
-cd Medical-LLM-Fine-tuning
-python train.py --model_type olmo3-7b-instruct --subset pqa_labeled --epochs 3 --full_finetune
+(cd Medical-LLM-Fine-tuning && python train.py --model_type olmo3-7b-instruct --subset pqa_labeled --epochs 3 --full_finetune)
 
 # Run RapidIn/LARK attribution with a saved config
 python scripts/attribution/run_rapidin_original.py --config configs/aligned_500/ckpt64_finetune.json
@@ -78,6 +95,11 @@ python data-aggregate/generate_figures.py
 
 The script writes into `ICHI_Data_Valuation/figures/`.
 
-## Paper And Reviews
+## Manuscript versions and limitations
 
-The submitted paper is at `ICHI_Data_Valuation/main.pdf`. The reviews mostly ask for stronger validation of the attribution approximation, robustness across seeds/projection dimensions, clearer separation of content from format, stronger baselines, and toned-down causal language. See `docs/REVIEW_RESPONSE_ROADMAP.md` for a concrete follow-up plan.
+The published record is linked above. `ICHI_Data_Valuation/main.pdf` is an archived six-page draft, not the three-page IEEE proceedings version. Its status as an accepted manuscript has not been verified. The reviews mostly ask for stronger validation of the attribution approximation, robustness across seeds/projection dimensions, clearer separation of content from format, stronger baselines, and toned-down causal language. See `docs/REVIEW_RESPONSE_ROADMAP.md` for a concrete follow-up plan.
+
+
+## Attribution and reuse
+
+The experiment pipeline builds on [RapidIn](https://github.com/huawei-lin/RapidIn), the fine-tuning submodule, PubMedQA, and OLMo. Cite and follow the terms of those projects as well as this paper when applicable. Submodules retain their own licenses. No repository-wide license is currently declared for the original material; public access alone does not grant an unrestricted reuse license. Paper text, source datasets, and model weights have separate terms.

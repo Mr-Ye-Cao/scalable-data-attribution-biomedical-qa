@@ -1,6 +1,6 @@
 # Code Guide
 
-This branch includes the result display plus the code needed to understand and rerun the pipeline.
+Start with [the no-GPU saved-score demo](REPRODUCING_RESULTS.md). Full pipeline reruns also require external dependencies, model weights, prepared data, and trained checkpoints; they have not been revalidated for this release.
 
 ## External Dependencies
 
@@ -18,7 +18,7 @@ The following are included as submodule references rather than copied into this 
 Initialize them with:
 
 ```bash
-git submodule update --init --recursive
+git submodule update --init RapidIn Medical-LLM-Fine-tuning pubmedqa
 ```
 
 ## Training And Evaluation

@@ -5,3 +5,8 @@
 *.log
 main.fdb_latexmk
 main.fls
+
+# Local demo output and Python caches
+__pycache__/
+*.pyc
+results/demo-summary.json
